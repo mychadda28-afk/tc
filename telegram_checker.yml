@@ -53,9 +53,9 @@ jobs:
         python telegram_web_github.py
     
     - name: Upload results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: telegram-check-results-${{ github.event.inputs.batch_start }}
+        name: results-${{ github.event.inputs.batch_start }}
         path: |
           has_telegram.txt
           no_telegram.txt
